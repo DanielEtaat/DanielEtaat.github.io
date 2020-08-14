@@ -1,3 +1,17 @@
-h1 {
-  font-weight: 100;
+.container {
+  background-color: #589aa3;
+}
+
+.text-main {
+  font-family: Georgia;
+  font-size: 100px;
+  opacity: 0.75;
+  line-height: 100px;
+  font-weight: 800;
+  color: #236069;
+}
+
+.box {
+  background-color: #236069;
+  padding: 20vh;
 }
