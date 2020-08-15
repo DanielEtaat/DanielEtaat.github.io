@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Fitness Challenge</title>
   </head>
+
   <body style="background-color: #589aa3;">
 
     <div class="container">
@@ -18,21 +19,24 @@
       </div>
 
       <div class="row box">
-        <div class="col-3 symbol text-center" style="cursor: pointer;">–</div>
-        <div class="col-6 symbol text-center">
-          25
+        <div class="col-3 symbol text-center" style="cursor: pointer;" id="minus">–</div>
+        <div class="col-6 symbol text-center" id="counter">
+          0
         </div>
-        <div class="col-3 symbol text-center" style="cursor: pointer;">+</div>
+        <div class="col-3 symbol text-center" style="cursor: pointer;" id="plus">+</div>
+        <div class="col-12 text-center">
+          <button class="submit" onclick="Submit()" id="submit">SUBMIT</button>
+        </div>
       </div>
 
       <div class="row box">
         <div class="col-6 symbol text-center p-5" style="font-size: 5vw;">
           <p style="font-family: Georgia;">TODAY</p>
-          <p>115</p>
+          <p>0</p>
         </div>
         <div class="col-6 symbol text-center p-5" style="font-size: 5vw;">
           <p style="font-family: Georgia;">WEEK</p>
-          <p>750</p>
+          <p>0</p>
         </div>
       </div>
 
@@ -40,8 +44,17 @@
 
     </div>
 
+    <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+
   </body>
 </html>

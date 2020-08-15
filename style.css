@@ -11,8 +11,13 @@
 }
 
 .box {
+  border-color: #3b6e75;
+  border-style: outset;
   background-color: #236069;
   margin-bottom: 20px;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+
 }
 
 .symbol {
@@ -21,4 +26,21 @@
   font-weight: 200;
   color: #589aa3;
   padding: 20px;
+}
+
+.submit {
+  border-color: #3b6e75;
+  font-family: Georgia;
+  font-size: 5vw;
+  opacity: 0.75;
+  font-weight: 800;
+  color: #589aa3;
+  margin: 20px;
+  padding: 20px;
+  background-color: #236069;
+}
+
+.submit:hover {
+  background-color: #3b6e75;
+  transition: background-color, 0.5s;
 }
