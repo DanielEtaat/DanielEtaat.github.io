@@ -1,4 +1,4 @@
-// incrmenting counter
+// incrementing counter
 document.getElementById("plus").onclick = function() {
   var count = document.getElementById("counter");
   var incrementedCount = parseInt(count.innerText)+1;
