@@ -38,9 +38,10 @@
   font-weight: 200;
   color: #589aa3;
   background-color: inherit;
-  border-style: none;
+  border-style: solid;
+  border-color: #589aa3;
   box-sizing: border-box;
-  width: 50%;
+  width: 100%;
   padding: 20px;
 }
 
