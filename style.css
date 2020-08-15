@@ -4,7 +4,7 @@
 
 .text-main {
   font-family: Georgia;
-  font-size: 80px;
+  font-size: 10vw;
   opacity: 0.75;
   font-weight: 800;
   color: #236069;
@@ -12,5 +12,13 @@
 
 .box {
   background-color: #236069;
-  padding: 20vh;  
+  margin-bottom: 20px;
+}
+
+.symbol {
+  font-size: 10vw;
+  opacity: 0.75;
+  font-weight: 200;
+  color: #589aa3;
+  padding: 20px;
 }
