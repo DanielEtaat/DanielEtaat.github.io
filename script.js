@@ -1,11 +1,11 @@
-// incrementing counter
+// Incrementing Counter
 document.getElementById("plus").onclick = function() {
   var count = document.getElementById("counter");
-  var incrementedCount = parseInt(count.innerText)+1;
-  count.innerText = incrementedCount.toString();
+  var incrementedCount = parseInt(count.value)+1;
+  count.value = incrementedCount.toString();
 }
 document.getElementById("minus").onclick = function() {
   var count = document.getElementById("counter");
-  var incrementedCount = parseInt(count.innerText)-1;
-  count.innerText = incrementedCount.toString();
+  var incrementedCount = parseInt(count.value)-1;
+  count.value = incrementedCount.toString();
 }

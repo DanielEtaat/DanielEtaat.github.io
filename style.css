@@ -2,6 +2,19 @@
   background-color: #589aa3;
 }
 
+.user-select {
+  text-align-last: center;
+  font-size: 10vw;
+  background-color: #589aa3;
+  padding: 20px;
+  font-weight: 800;
+  color: #236069;
+  font-family: Georgia;
+  border: 5px, solid;
+  appearance: none;
+  border-color: #236069;
+}
+
 .text-main {
   font-family: Georgia;
   font-size: 10vw;
@@ -18,6 +31,17 @@
   padding-top: 5vh;
   padding-bottom: 10vh;
 
+}
+
+.counter {
+  font-size: 10vw;
+  font-weight: 200;
+  color: #589aa3;
+  background-color: inherit;
+  border-style: none;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 20px;
 }
 
 .symbol {

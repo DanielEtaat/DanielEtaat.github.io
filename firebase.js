@@ -16,17 +16,90 @@ firebase.analytics();
 var db = firebase.firestore();
 
 // Updating Database
-function Submit() {
-  var count = document.getElementById("counter").innerText;
-  var today = new Date();
-  db.collection("pushups").add({
-      pushups: count,
-      datetime: today.getUTCFullYear() + ':' + (today.getMonth()+1) + ':' + today.getDate() + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
-  })
-  .then(function(docRef) {
-    console.log("Document written with ID: ", docRef.id);
-  })
-  .catch(function(error) {
-      console.error("Error adding document: ", error);
-  });
+// Submits the total number of pushups inputed by the user to a firebase database
+function SubmitCount() {
+    var count = document.getElementById("counter").value;
+    if (count !== "0") {
+        var user = document.getElementById("user-select").value;
+        var timestamp = firebase.firestore.Timestamp.fromDate(new Date());
+        db.collection("pushups").add({
+            name: user,
+            pushups: count,
+            date: timestamp
+        })
+        .then(function(docRef) {
+          console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        })
+        .then(function() {
+            retrieveTotals();
+        });
+    }
+}
+
+// Reading Database
+// Retrieves the total number of pushups done in the past day and week
+var totalDay;
+var totalWeek;
+function retrieveTotals() {
+
+    totalDay = 0;
+    totalWeek = 0;
+    var today = new Date();
+    today.setHours(0,0,0,0);
+    var monday = getPreviousMonday();
+    var timestamp = firebase.firestore.Timestamp.fromDate(today);
+    var user = document.getElementById("user-select").value;
+
+    db.collection("pushups").where("date", ">=", today)
+    .get()
+    .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            if (doc.data()["name"] == user) {
+                totalDay += parseInt(doc.data()["pushups"]);
+            }
+        });
+    });
+
+    db.collection("pushups").where("date", ">=", monday)
+    .get()
+    .then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            if (doc.data()["name"] == user) {
+                totalWeek += parseInt(doc.data()["pushups"]);
+            }
+        });
+    })
+    .then(function() {
+      resetForm();
+    })
+
+}
+
+// Misc Functions
+// Gets most recent monday as a Timestamp
+function getPreviousMonday() {
+    var date = new Date();
+    var day = date.getDay();
+    var prevMonday = new Date();
+    if (date.getDay() == 0) {
+        prevMonday.setDate(date.getDate() - 7);
+    }
+    else {
+        prevMonday.setDate(date.getDate() - day);
+    }
+    prevMonday.setHours(0,0,0,0);
+    return firebase.firestore.Timestamp.fromDate(prevMonday);
+}
+
+// Resets the main page
+function resetForm() {
+  var dayCount = document.getElementById("day-count");
+  var weekCount = document.getElementById("week-count");
+  var count = document.getElementById("counter");
+  dayCount.innerText = totalDay;
+  weekCount.innerText = totalWeek;
+  count.value = 0;
 }
