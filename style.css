@@ -4,14 +4,13 @@
 
 .text-main {
   font-family: Georgia;
-  font-size: 100px;
+  font-size: 80px;
   opacity: 0.75;
-  line-height: 100px;
   font-weight: 800;
   color: #236069;
 }
 
 .box {
   background-color: #236069;
-  padding: 20vh;
+  padding: 20vh;  
 }
