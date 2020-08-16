@@ -13,20 +13,20 @@ body {
 }
 
 .top {
-  padding: 40% 0 50% 0;
+  padding: 30% 0 25% 0;
 }
 
 .top > img {
   z-index: -1;
   width: 70%;
-  position: fixed;
-  top: 15%;
+  position: absolute;
+  top: 12%;
   right: 15%;
   opacity: 0.5;
 }
 
 select.user {
-  background: #37de99;
+  background: #338f78;
   text-align-last: center;
   border: none;
   box-sizing: border-box;
