@@ -26,6 +26,7 @@ body {
 }
 
 select.user {
+  -webkit-appearance: none;
   background: #37de99;
   text-align-last: center;
   border: none;
