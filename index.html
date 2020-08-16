@@ -1,52 +1,57 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Fitness Challenge</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <script src="js/index.js"></script>
   </head>
 
-  <body style="background-color: #589aa3;" onload="retrieveTotals();">
+  <body>
 
-    <div class="container">
+    <div class="top-nav row text-center">
+      <div class="profile col-6"><a href="#">Profile</a></div>
+      <div class="community col-6"><a href="#">Community</a></div>
+    </div>
 
-      <div class="row p-5 mt-5 text-main">
-        <div class="col-12">
-          <div class="text-center">
-            <select id="user-select" class="user-select text-center" onchange="retrieveTotals();">
-              <option>DANNY'S</option>
-              <option>NIMA'S</option>
-            </select>
-          </div>
-          <p class="text-center">PUSHUPS</p>
+    <div class="top">
+      <img src="pushup.png" alt="pushup">
+    </div>
+
+    <select id="user" class="user" onchange="retrieveTotals();">
+      <option>Danny</option>
+      <option>Nima</option>
+    </select>
+
+    <div class="container-fluid">
+
+      <div class="row mid1">
+        <div class="col-12 p-0 text-center">
+          <p class="mid1-text">ADD PUSHUPS</p>
+          <input class="count text-center" id="count" type="text" placeholder="0" value="0">
+          <br>
+          <button type="button" class="submit" onclick="SubmitCount();">Submit</button>
         </div>
       </div>
 
-        <div class="row box">
-          <div class="col-3 symbol text-center" style="cursor: pointer;" id="minus">–</div>
-          <div class="col-6 text-center">
-            <input type="text" id="counter" class="text-center counter" placeholder="0" value="0">
-          </div>
-          <div class="col-3 symbol text-center" style="cursor: pointer;" id="plus">+</div>
-          <div class="col-12 text-center">
-            <button class="submit" onclick="SubmitCount();">SUBMIT</button>
-          </div>
-        </div>
-
-      <div class="row box">
-        <div class="col-6 symbol text-center p-5" style="font-size: 5vw;">
-          <p style="font-family: Georgia;">TODAY</p>
-          <p id="day-count">0</p>
-        </div>
-        <div class="col-6 symbol text-center p-5" style="font-size: 5vw;">
-          <p style="font-family: Georgia;">WEEK</p>
-          <p id="week-count">0</p>
+      <div class="row mid2">
+        <div class="col-12 p-0 text-center">
+          <p class="mid2-text">TODAY</p>
+          <hr class="black">
+          <p class="today" id="daycount">120</p>
         </div>
       </div>
 
-      <div class="row p-5"></div>
+      <div class="row mid1">
+        <div class="col-12 p-0 text-center">
+          <p class="mid1-text">WEEK</p>
+          <hr class="green">
+          <p class="week" id="weekcount">1200</p>
+        </div>
+      </div>
 
     </div>
 
@@ -59,8 +64,8 @@
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
-    <script src="firebase.js"></script>
-    <script src="script.js"></script>
+    <script src="js/firebase.js"></script>
 
   </body>
+
 </html>

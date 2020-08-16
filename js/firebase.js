@@ -18,9 +18,9 @@ var db = firebase.firestore();
 // Updating Database
 // Submits the total number of pushups inputed by the user to a firebase database
 function SubmitCount() {
-    var count = document.getElementById("counter").value;
+    var count = document.getElementById("count").value;
     if (count !== "0") {
-        var user = document.getElementById("user-select").value;
+        var user = document.getElementById("user").value;
         var timestamp = firebase.firestore.Timestamp.fromDate(new Date());
         db.collection("pushups").add({
             name: user,
@@ -51,7 +51,7 @@ function retrieveTotals() {
     today.setHours(0,0,0,0);
     var monday = getPreviousMonday();
     var timestamp = firebase.firestore.Timestamp.fromDate(today);
-    var user = document.getElementById("user-select").value;
+    var user = document.getElementById("user").value;
 
     db.collection("pushups").where("date", ">=", today)
     .get()
@@ -96,9 +96,9 @@ function getPreviousMonday() {
 
 // Resets the main page
 function resetForm() {
-  var dayCount = document.getElementById("day-count");
-  var weekCount = document.getElementById("week-count");
-  var count = document.getElementById("counter");
+  var dayCount = document.getElementById("daycount");
+  var weekCount = document.getElementById("weekcount");
+  var count = document.getElementById("count");
   dayCount.innerText = totalDay;
   weekCount.innerText = totalWeek;
   count.value = 0;

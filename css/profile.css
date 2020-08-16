@@ -1,0 +1,19 @@
+.top-nav > div.profile {
+  border: 1px #37de99 solid;
+  border-bottom: 2px #37de99 solid;
+  background: #37de99;
+}
+
+.top-nav > div.community {
+  border: 1px #37de99 solid;
+  border-bottom: 2px #37de99 solid;
+  background: black;
+}
+
+.top-nav > div.profile > a {
+  color: black;
+}
+
+.top-nav > div.community > a {
+  color: #37de99;
+}

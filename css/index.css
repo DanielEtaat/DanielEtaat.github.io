@@ -1,0 +1,113 @@
+body {
+  background: #338f78;
+}
+
+.top-nav {
+  position: fixed;
+  z-index: 10;
+}
+
+.top-nav > div {
+  width: 53vw;
+  padding: 10px;
+}
+
+.top {
+  padding: 40% 0 50% 0;
+}
+
+.top > img {
+  z-index: -1;
+  width: 70%;
+  position: fixed;
+  top: 15%;
+  right: 15%;
+  opacity: 0.5;
+}
+
+select.user {
+  background: #37de99;
+  text-align-last: center;
+  border: none;
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 20px;
+  appearance: none;
+  color: black;
+  font-size: 10vw;
+  font-weight: 100;
+}
+
+.mid1 {
+  padding: 40px 0 40px 0;
+  background: black;
+  width: 100vw;
+}
+
+.mid1-text {
+  color: #37de99;
+  font-size: 10vw;
+  font-weight: 100;
+  margin: 10px;
+}
+
+.mid2 {
+  padding: 40px 0 40px 0;
+  background: #37de99;
+  width: 100vw;
+}
+
+.mid2-text {
+  color: black;
+  font-size: 10vw;
+  font-weight: 100;
+  margin: 10px;
+}
+
+input.count {
+  margin-top: 2vw;
+  margin-bottom: 5vw;
+  font-size: 20vw;
+  width: 50vw;
+  color: #37de99;
+  font-weight: 100;
+  background: black;
+  border-style: solid;
+  border-color: #37de99;
+  opacity: 0.8;
+}
+
+button.submit {
+  margin-bottom: 5vw;
+  padding: 5px 0 5px 0;
+  background: black;
+  color: #37de99;
+  width: 50vw;
+  border-color: #37de99;
+  border-style: solid;
+  opacity: 0.7;
+}
+
+p.today {
+  line-height: 30vw;
+  color: black;
+  font-size: 15vw;
+  font-weight: 100;
+}
+
+p.week {
+  line-height: 30vw;
+  color: #37de99;
+  font-size: 15vw;
+  font-weight: 100;
+}
+
+hr.green {
+  border-top: 1px solid #338f78;
+  margin: 0;
+}
+
+hr.black {
+  border-top: 1px solid black;
+  margin: 0;
+}
