@@ -19,7 +19,7 @@ body {
 .top > img {
   z-index: -1;
   width: 70%;
-  position: fixed;
+  position: absolute;
   top: 15%;
   right: 15%;
   opacity: 0.5;
