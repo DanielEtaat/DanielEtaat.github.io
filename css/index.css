@@ -13,14 +13,14 @@ body {
 }
 
 .top {
-  padding: 30% 0 25% 0;
+  padding: 30% 0 30% 0;
 }
 
 .top > img {
   z-index: -1;
   width: 70%;
   position: absolute;
-  top: 12%;
+  top: 15%;
   right: 15%;
   opacity: 0.5;
 }
@@ -32,7 +32,7 @@ select.user {
   border: none;
   box-sizing: border-box;
   width: 100vw;
-  padding: 20px;
+  padding: 20px 40px 20px 40px;
   appearance: none;
   color: black;
   font-size: 10vw;
