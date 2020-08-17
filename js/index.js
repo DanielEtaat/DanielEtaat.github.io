@@ -14,7 +14,7 @@ window.onload = function() {
   document.getElementById("daygoal").innerText = dayGoal.toString();
 
   // Retrieving user data
-  // retrieveTotals();
+  retrieveTotals();
 }
 
 
