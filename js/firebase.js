@@ -91,6 +91,7 @@ function getPreviousMonday() {
         prevMonday.setDate(date.getDate() - day);
     }
     prevMonday.setHours(0,0,0,0);
+    prevMonday.setTime(prevMonday.getTime() + 86400000);
     return firebase.firestore.Timestamp.fromDate(prevMonday);
 }
 
