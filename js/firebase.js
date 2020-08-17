@@ -90,9 +90,9 @@ function getWeeklyRankings() {
       querySnapshot.forEach(function(doc) {
         name = doc.data()["name"];
         if (name in weeklyRanks) {
-          weeklyRanks[name] += doc.data()["pushups"];
+          weeklyRanks[name] += parseInt(doc.data()["pushups"]);
         } else {
-          weeklyRanks[name] = doc.data()["pushups"];
+          weeklyRanks[name] = parseInt(doc.data()["pushups"]);
         }
       });
   }).then(function() {
@@ -115,9 +115,9 @@ function getDailyRankings() {
       querySnapshot.forEach(function(doc) {
         name = doc.data()["name"];
         if (name in dailyRanks) {
-          dailyRanks[name] += doc.data()["pushups"];
+          dailyRanks[name] += parseInt(doc.data()["pushups"]);
         } else {
-          dailyRanks[name] = doc.data()["pushups"];
+          dailyRanks[name] = parseInt(doc.data()["pushups"]);
         }
       });
   }).then(function() {
