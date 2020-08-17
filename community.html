@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/community.css">
+    <script type="text/javascript" src="js/community.js"></script>
   </head>
 
   <body>
@@ -21,39 +21,40 @@
       <img src="pushup.png" alt="pushup">
     </div>
 
-    <select id="user" class="user" onchange="retrieveTotals();">
-      <option>Danny</option>
-      <option>Nima</option>
-    </select>
+    <div class="top-text">
+      COMMUNITY <br>
+      LEADERBOARDS
+    </div>
 
     <div class="container-fluid">
 
       <div class="row mid1">
         <div class="col-12 p-0 text-center">
-          <p class="mid1-text">ADD PUSHUPS</p>
-          <input class="count text-center" id="count" type="text" placeholder="0">
-          <br>
-          <button type="button" class="submit" onclick="SubmitCount();">Submit</button>
+          <p class="mid1-text">TODAY</p>
+          <hr class="green">
+        </div>
+        <div class="col-6">
+          <div id="today-names" class="pt-3 today-list text-center">
+          </div>
+        </div>
+        <div class="col-6">
+          <div id="today-counts" class="pt-3 today-list text-center">
+          </div>
         </div>
       </div>
 
       <div class="row mid2">
         <div class="col-12 p-0 text-center">
-          <p class="mid2-text">TODAY</p>
+          <p class="mid2-text">WEEK</p>
           <hr class="black">
-          <p class="today">
-            <span id="daycount">0</span>/<span id="daygoal">0</span>
-          </p>
         </div>
-      </div>
-
-      <div class="row mid1">
-        <div class="col-12 p-0 text-center">
-          <p class="mid1-text">WEEK</p>
-          <hr class="green">
-          <p class="week">
-            <span id="weekcount">0</span>/<span id="weekgoal">0</span>
-          </p>
+        <div class="col-6">
+          <div id="week-names" class="pt-3 week-list text-center">
+          </div>
+        </div>
+        <div class="col-6">
+          <div id="week-counts" class="pt-3 week-list text-center">
+          </div>
         </div>
       </div>
 

@@ -9,12 +9,12 @@ window.onload = function() {
 
   // Updating weekly and daily goals on the profile page
   var weekGoal = getWeeklyGoal();
-  var dayGoal = Math.floor(weekGoal/7);
+  var dayGoal = Math.round(weekGoal/7);
   document.getElementById("weekgoal").innerText = weekGoal.toString();
   document.getElementById("daygoal").innerText = dayGoal.toString();
 
   // Retrieving user data
-  retrieveTotals();
+  // retrieveTotals();
 }
 
 
@@ -24,6 +24,6 @@ function getWeeklyGoal() {
   const today = new Date();
   var daysPast = (today.getTime()-startDate) / 86400000;
   var weekNumber = Math.floor(daysPast / 7);
-  var goal = 1000 + weekNumber * 250;
+  var goal = 750 + weekNumber * 250;
   return goal;
 }

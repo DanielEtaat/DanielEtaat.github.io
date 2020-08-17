@@ -1,0 +1,43 @@
+.top-nav > div.profile {
+  border: 1px #37de99 solid;
+  border-bottom: 2px #37de99 solid;
+  background: black;
+}
+
+.top-nav > div.community {
+  border: 1px #37de99 solid;
+  border-bottom: 2px #37de99 solid;
+  background: #37de99;
+}
+
+.top-nav > div.profile > a {
+  color: #37de99;
+}
+
+.top-nav > div.community > a {
+  color: black;
+}
+
+.top-text {
+  background: #338f78;
+  text-align: center;
+  padding: 30px 40px 20px 40px;
+  color: black;
+  font-size: 10vw;
+  font-weight: 100;
+}
+
+.today-list > li {
+  color: #338f78
+}
+
+.week-list > li {
+  color: black;
+}
+
+li {
+  list-style-type: none;
+  line-height: 20vw;
+  font-size: 10vw;
+  font-weight: 100;
+}
