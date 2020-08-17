@@ -41,3 +41,17 @@ li {
   font-size: 10vw;
   font-weight: 100;
 }
+
+/* For larger screens */
+@media (min-width: 500px) {
+
+  .top-text {
+      font-size: 50px;
+  }
+
+  li {
+    line-height: 100px;
+    font-size: 50px;
+  }
+
+}

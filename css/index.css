@@ -117,3 +117,45 @@ hr.black {
   border-top: 1px solid black;
   margin: 0;
 }
+
+/* For larger screens  */
+@media (min-width: 500px) {
+
+  .top {
+      padding: 125px 0 125px 0;
+  }
+
+  .top > img {
+    width: 350px;
+    right: calc(50vw - 175px);
+  }
+
+  select.user {
+    font-size: 50px;
+  }
+
+  .mid1-text {
+    font-size: 50px;
+  }
+
+  .mid2-text {
+    font-size: 50px;
+  }
+
+  input.count {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 100px;
+  }
+
+  p.today {
+    font-size: 75px;
+    line-height: 150px;
+  }
+
+  p.week {
+    font-size: 75px;
+    line-height: 150px;
+  }
+
+}
