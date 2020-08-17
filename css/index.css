@@ -18,10 +18,10 @@ body {
 
 .top > img {
   z-index: 2;
-  width: 70%;
+  width: 70vw;
   position: absolute;
   top: 15%;
-  right: 15%;
+  right: 15vw;
   opacity: 0.5;
 }
 
@@ -87,6 +87,11 @@ button.submit {
   border-color: #37de99;
   border-style: solid;
   opacity: 0.7;
+}
+
+button.submit:hover {
+  background: #338f78;
+  transition: 0.5s;
 }
 
 p.today {
