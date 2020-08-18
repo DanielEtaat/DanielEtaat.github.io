@@ -96,7 +96,7 @@ function getWeeklyRankings() {
         }
       });
   }).then(function() {
-    weeklyRankedNames = Object.keys(weeklyRanks).sort();
+    weeklyRankedNames = Object.keys(weeklyRanks).sort().reverse();
     resetWeeklyRankings();
   });
 }
@@ -121,7 +121,7 @@ function getDailyRankings() {
         }
       });
   }).then(function() {
-    dailyRankedNames = Object.keys(dailyRanks).sort();
+    dailyRankedNames = Object.keys(dailyRanks).sort().reverse();
     resetDailyRankings();
   });
 }

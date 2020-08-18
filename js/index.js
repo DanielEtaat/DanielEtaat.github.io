@@ -5,6 +5,8 @@ window.onload = function() {
   const urlParams = new URLSearchParams(queryString);
   if (urlParams.get("user") !== null) {
     document.getElementById("user").value = urlParams.get("user");
+    document.getElementById("profile-link").href = "index.html?user=" + urlParams.get("user")
+    document.getElementById("community-link").href = "community.html?user=" + urlParams.get("user")
   }
 
   // Updating weekly and daily goals on the profile page
