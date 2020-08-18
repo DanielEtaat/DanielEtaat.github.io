@@ -96,7 +96,12 @@ function getWeeklyRankings() {
         }
       });
   }).then(function() {
-    weeklyRankedNames = Object.keys(weeklyRanks).sort().reverse();
+    weeklyRankedNames = Object.keys(weeklyRanks).map(function(key) {
+      return [key, weeklyRanks[key]];
+    });
+    weeklyRankedNames.sort(function(first, second) {
+      return second[1] - first[1];
+    });
     resetWeeklyRankings();
   });
 }
@@ -121,7 +126,12 @@ function getDailyRankings() {
         }
       });
   }).then(function() {
-    dailyRankedNames = Object.keys(dailyRanks).sort().reverse();
+    dailyRankedNames = Object.keys(dailyRanks).map(function(key) {
+      return [key, dailyRanks[key]];
+    });
+    dailyRankedNames.sort(function(first, second) {
+      return second[1] - first[1];
+    });
     resetDailyRankings();
   });
 }
@@ -160,8 +170,8 @@ function resetWeeklyRankings() {
   for (var i = 0; i < weeklyRankedNames.length; i++) {
     var nameNode = document.createElement("li");
     var countNode = document.createElement("li");
-    nameNode.innerText = (i+1).toString() + ". " + weeklyRankedNames[i];
-    countNode.innerText = weeklyRanks[weeklyRankedNames[i]];
+    nameNode.innerText = (i+1).toString() + ". " + weeklyRankedNames[i][0];
+    countNode.innerText = weeklyRankedNames[i][1];
     weekNamesList.appendChild(nameNode);
     weekCountsList.appendChild(countNode);
   }
@@ -174,8 +184,8 @@ function resetDailyRankings() {
   for (var i = 0; i < dailyRankedNames.length; i++) {
     var nameNode = document.createElement("li");
     var countNode = document.createElement("li");
-    nameNode.innerText = (i+1).toString() + ". " + dailyRankedNames[i];
-    countNode.innerText = dailyRanks[dailyRankedNames[i]];
+    nameNode.innerText = (i+1).toString() + ". " + dailyRankedNames[i][0];
+    countNode.innerText = dailyRankedNames[i][1];
     dayNamesList.appendChild(nameNode);
     dayCountsList.appendChild(countNode);
   }
