@@ -38,7 +38,7 @@
 li {
   list-style-type: none;
   line-height: 20vw;
-  font-size: 10vw;
+  font-size: 7.5vw;
   font-weight: 100;
 }
 
@@ -51,7 +51,7 @@ li {
 
   li {
     line-height: 100px;
-    font-size: 50px;
+    font-size: 37.5px;
   }
 
 }
